@@ -1,0 +1,20 @@
+1. Fetch data and calculate log prices
+
+
+2. Create iterable of daily data for given window
+
+
+3. Design OLS for $ln(p_a) = \alpha + \beta ln(p_b) + \epsilon$.
+
+    a. Intercept (alpha) assumption
+
+    b. Correct for heteroskedastic serially correlated standard errors
+
+
+4. Calculate residual, $\epsilon = ln(p_a) - \beta ln(p_b)$
+
+
+5. Standardize residual, $\gamma:=\frac{\epsilon - \mathbb{E}[\epsilon]}{\sigma[\epsilon]}$
+
+
+6. Consider $\gamma$ for various windows using the null hypothesis $\lim_{t \rightarrow \infty} \mathbb{E}_t[\epsilon_t - \mathbb{E}_t[\epsilon_t]] \rightarrow 0)$

@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "crypto_bot"
+version = "0.1.0"
+description = ""
+authors = ["kally"]
+packages = [
+    { include = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "~3.8"
+aiohttp = "^3.7.4"
+alpaca-trade-api = "^1.2.3"
+arrow = "^1.1.1"
+boto3 = "^1.18.6"
+chromedriver-autoinstaller = "0.2.2"
+click = "^8.0.1"
+cvxpy = "^1.1.14"
+dacite = "^1.6.0"
+humanize = "^2.4.0"
+ib-insync = "0.9.66"
+loguru = "^0.4.1"
+matplotlib = "^3.4.2"
+mode = "4.3.2"
+numpy = "^1.21.1"
+opsgenie-sdk = "^2.0.3"
+overrides = "^3.1.0"
+pandas = "^1.3.0"
+pandas-datareader = "0.10.0"
+pandas-market-calendars = "^2.0"
+psutil = "^5.7.0"
+pyarrow = "^5.0.0"
+python-dotenv = "^0.19.0"
+requests = "^2.26.0"
+scipy = "^1.7.1"
+seaborn = "^0.11.1"
+selenium = "^3.141.0"
+slackclient = "^2.5.0"
+tabulate = "^0.8.7"
+tenacity = "^6.2.0"
+tqdm = "^4.61.2"
+rich = "^10.6.0"
+Deprecated = "^1.2.13"
+pip = "^21.3.1"
+robin-stocks = "^2.1.0"
+
+[tool.poetry.dev-dependencies]
+jupyterlab = "^3.1.0"
+scikit-learn = "^0.24.1"
+pytest = "^6.2.4"
+pytest-asyncio = "^0.15.1"
+pytest-cov = "^2.12.1"
+pytest-freezegun = "^0.4.2"
+pytest-random-order = "^1.0.4"
+mypy = "^0.910"
+flake8 = "^3.9.2"
+plotly = "^5.5.0"
+jupyter-dash = "^0.4.0"
+ipywidgets = "^7.6.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+bot = 'src.cli:bot'
+
+[tool.pytest.ini_options]
+addopts = "-s"
+testpaths = ["tests"]
